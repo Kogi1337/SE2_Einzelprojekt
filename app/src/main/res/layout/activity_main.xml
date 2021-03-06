@@ -27,15 +27,40 @@
         android:layout_marginTop="5dp"
         />
 
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttonLayout"
+        android:layout_below="@id/txtNumber"
+        android:layout_centerHorizontal="true">
+
+        <Button
+            android:id="@+id/btnSend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Abschicken"
+            android:layout_marginRight="5dp"/>
+
+        <Button
+            android:id="@+id/btnCalc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/btnSend"
+            android:text="Berechnen"
+            android:layout_marginLeft="5dp"/>
+    </LinearLayout>
+
+
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="24sp"
-        tools:text="Antwort vom Server"
-        android:layout_below="@id/txtNumber"
+        android:layout_below="@id/buttonLayout"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="30dp"/>
+        android:layout_marginTop="15dp"
+        android:text="Antwort vom Server:"
+        android:textSize="24sp"
+        tools:text="Antwort vom Server:" />
 
     <TextView
         android:id="@+id/txtAnswer"
@@ -45,11 +70,23 @@
         android:layout_margin="15dp"
         android:layout_marginTop="20dp"/>
 
-    <Button
-        android:id="@+id/btnSend"
+    <TextView
+        android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Abschicken"
         android:layout_below="@id/txtAnswer"
-        android:layout_centerHorizontal="true"/>
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:text="Resultat der Berechnung:"
+        android:textSize="24sp"
+        tools:text="Resultat der Berechnung:" />
+
+    <TextView
+        android:id="@+id/txtAnswerCalc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView4"
+        android:layout_margin="15dp"
+        android:padding="10dp"
+        android:layout_marginTop="20dp"/>
 </RelativeLayout>
