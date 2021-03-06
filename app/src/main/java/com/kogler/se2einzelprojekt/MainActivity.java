@@ -1,17 +1,15 @@
 package com.kogler.se2einzelprojekt;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Collections;
-import java.util.Comparator;
 import java.util.List;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -54,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
             if (txtMatrikelNummber != null && txtMatrikelNummber.getText().toString().length() != 0) {
                 //Checken ob die Eingabe überhaupt 8 Zeichen lang ist
                 if (txtMatrikelNummber.getText().toString().length() == 8) {
-                    sortMatrikelNummer();
+                    sortMatrikelNumber();
                 } else {
                     Toast.makeText(getApplicationContext(), "Eine Matrikelnummer muss 8 Zeichen lang sein.", Toast.LENGTH_LONG).show();
                 }
@@ -87,7 +85,7 @@ public class MainActivity extends AppCompatActivity {
      * 11903829 mod 7 = 0.
      * Matrikelnummer wird sortiert, wobei zuerst die geraden dann erst die ungeraden Ziffern sortiert werden.
      */
-    private void sortMatrikelNummer() {
+    private void sortMatrikelNumber() {
         String matrikelnummer = txtMatrikelNummber.getText().toString();
         List<Integer> evenNumbers = new ArrayList<>();
         List<Integer> oddNumbers = new ArrayList<>();
